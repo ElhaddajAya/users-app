@@ -31,7 +31,7 @@ Le serveur backend sera disponible sur `http://localhost:5000`.
 
 ### Frontend
 
-1. Naviguez vers le répertoire [frontend](http://_vscodecontentref_/12) :
+1. Naviguez vers le répertoire `frontend` :
     ```sh
     cd frontend
     ```
