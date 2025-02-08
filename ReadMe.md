@@ -46,7 +46,7 @@ Le serveur backend sera disponible sur `http://localhost:5000`.
     npm start
     ```
 
-L'application  serafrontend disponible sur `http://localhost:3000`.
+L'application  sera disponible sur `http://localhost:3000`.
 
 ## Fonctionnalités
 
