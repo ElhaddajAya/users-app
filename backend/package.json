@@ -3,10 +3,7 @@
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "express": "^4.21.2",
-<<<<<<< HEAD
     "mongoose": "^8.10.1",
-=======
->>>>>>> c6afb6f31c6a28966bacf477cc02890fa36036fc
     "sqlite3": "^5.1.7"
   }
 }
