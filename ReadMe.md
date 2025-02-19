@@ -31,11 +31,7 @@ Le serveur backend sera disponible sur `http://localhost:5000`.
 
 ### Frontend
 
-<<<<<<< HEAD
-1. Naviguez vers le répertoire [frontend](http://_vscodecontentref_/12) :
-=======
 1. Naviguez vers le répertoire `frontend` :
->>>>>>> c6afb6f31c6a28966bacf477cc02890fa36036fc
     ```sh
     cd frontend
     ```
@@ -50,11 +46,7 @@ Le serveur backend sera disponible sur `http://localhost:5000`.
     npm start
     ```
 
-<<<<<<< HEAD
-L'application  serafrontend disponible sur `http://localhost:3000`.
-=======
 L'application  sera disponible sur `http://localhost:3000`.
->>>>>>> c6afb6f31c6a28966bacf477cc02890fa36036fc
 
 ## Fonctionnalités
 
@@ -65,8 +57,4 @@ L'application  sera disponible sur `http://localhost:3000`.
 
 ## Captures d'écran
 
-<<<<<<< HEAD
 Les captures d'écran de l'application sont disponibles dans le répertoire `backend/Screenshots` avec les tests sur Postman.
-=======
-Les captures d'écran de l'application sont disponibles dans le répertoire `backend/Screenshots` avec les tests sur Postman.
->>>>>>> c6afb6f31c6a28966bacf477cc02890fa36036fc
