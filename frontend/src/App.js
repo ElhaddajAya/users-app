@@ -63,8 +63,8 @@ function UserList() {
   // Delete user
   const deleteUser = async (id) => {
     try {
-      const response = await axios.delete('http://localhost:5000/users/' + id);
-      setUsers(users.filter(user => user.id !== id));
+      await axios.delete('http://localhost:5000/users/' + id);
+      setUsers(users.filter(user => user._id !== id));
 
       // Refresh users list
       getUsers();
@@ -89,14 +89,14 @@ function UserList() {
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
+            <tr key={user._id}>
+              <td>{user._id}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.phone}</td>
               <td>
-                <button onClick={() => navigate(`/update/${user.id}`)}>Edit</button>
-                <button onClick={() => deleteUser(user.id)}>Delete</button>
+                <button onClick={() => navigate(`/update/${user._id}`)}>Edit</button>
+                <button onClick={() => deleteUser(user._id)}>Delete</button>
               </td>
             </tr>
           ))}
