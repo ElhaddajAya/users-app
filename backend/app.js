@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+require('dotenv').config();  // Charger les variables d'environnement
+
 const app = express();  // Create an Express app
-const port = 5000;  // Port number for the server
+const port = process.env.BACKEND_PORT || 5000;  // Utiliser la variable d'environnement
 
 app.use(cors());  // Enable CORS
 app.use(express.json());  // Enable JSON body parsing
@@ -25,7 +27,7 @@ const db = new sqlite3.Database('users.db', (err) => {
 ***************/
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/usersDB', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -101,9 +103,22 @@ app.delete('/users/:id', (req, res) => {
 *
 ***************/
 
+// Vérifier et créer la collection si elle n'existe pas
+// mongoose.connection.once('open', async () => {
+//     const collections = await mongoose.connection.db.listCollections().toArray();
+//     const collectionNames = collections.map(col => col.name);
+
+//     if (!collectionNames.includes('users')) {
+//         await mongoose.connection.db.createCollection('users');
+//         console.log("Collection 'users' créée.");
+//     } else {
+//         console.log("Collection 'users' existe déjà.");
+//     }
+// });
+
 
 // CRUD
-const User = require('./models/user');
+const User = require('./models/User.js');
 
 // Get all users
 app.get('/users', async (req, res) => {
