@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-require('dotenv').config();  // Charger les variables d'environnement
+require('dotenv').config({ path: '../.env' }); // Adjust path to load .env from the root
 
 const app = express();  // Create an Express app
 const port = process.env.BACKEND_PORT || 5000;  // Utiliser la variable d'environnement
@@ -27,7 +27,9 @@ const db = new sqlite3.Database('users.db', (err) => {
 ***************/
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
+const mongoUri = process.env.MONGO_URI || 'mongodb://mongodb:27017/usersDB';
+
+mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
