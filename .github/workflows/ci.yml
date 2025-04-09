@@ -23,10 +23,6 @@ jobs:
         working-directory: ./backend
         run: npm install
 
-      - name: 🔓 Donner les permissions d'exécution à Mocha
-        run: chmod +x ./node_modules/.bin/mocha
-
-
       - name: 🧪 Lancer les tests backend
         working-directory: ./backend
-        run: npx mocha test/**/*
+        run: npx ./node_modules/.bin/mocha test/**/*.js
