@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: 🔓 Donner les permissions d'exécution à Mocha
-        run: chmod +x ./node_modules/.bin/_mocha
+        run: chmod +x ./node_modules/.bin/mocha
 
 
       - name: 🧪 Lancer les tests backend
