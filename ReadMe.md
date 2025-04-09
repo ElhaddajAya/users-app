@@ -1,6 +1,6 @@
 # Gestion des Utilisateurs - Aya EL HADDAJ
 
-Ce projet est une application de gestion des utilisateurs construite avec React pour le frontend et Express avec SQLite pour le backend.
+Ce projet est une application de gestion des utilisateurs construite avec React pour le frontend et Express avec MongoDB pour le backend.
 
 ## Structure du Projet
 
@@ -27,7 +27,7 @@ Ce projet est une application de gestion des utilisateurs construite avec React 
     ```sh
     node app.js
 
-Le serveur backend sera disponible sur `http://localhost:5000`.
+Le serveur backend sera disponible sur `http://localhost:5002`.
 
 ### Frontend
 
