@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-require('dotenv').config({ path: '../.env' }); // Adjust path to load .env from the root
+require('dotenv').config({ path: '../.env' }); 
 
 const app = express();  // Create an Express app
-const port = process.env.BACKEND_PORT || 5000;  // Utiliser la variable d'environnement
+const port = process.env.BACKEND_PORT || 5000;  
 
 app.use(cors());  // Enable CORS
 app.use(express.json());  // Enable JSON body parsing
@@ -29,10 +29,7 @@ const db = new sqlite3.Database('users.db', (err) => {
 // Connect to MongoDB
 const mongoUri = process.env.MONGO_URI || 'mongodb://mongodb:27017/usersDB';
 
-mongoose.connect(mongoUri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(mongoUri)
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.error("Error connecting to MongoDB", err));
 
@@ -181,3 +178,5 @@ app.delete('/users/:id', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 })
+
+module.exports = app;  // Exporting the app for testing purposes
