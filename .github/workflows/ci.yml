@@ -1,12 +1,28 @@
-name: Simple Test
+name: CI - Backend Tests
 
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  say-hello:
+  test-backend:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Bonjour GitHub Actions !"
+      - name: 📥 Checkout du code
+        uses: actions/checkout@v3
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📦 Installer les dépendances backend
+        working-directory: ./backend
+        run: npm install
+
+      - name: 🧪 Lancer les tests backend
+        working-directory: ./backend
+        run: npm test
