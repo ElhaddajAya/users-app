@@ -25,4 +25,4 @@ jobs:
 
       - name: 🧪 Lancer les tests backend
         working-directory: ./backend
-        run: npm test
+        run: npx mocha test/**/*.test.js
