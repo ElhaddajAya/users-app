@@ -194,4 +194,4 @@ L'intégration continue a échoué, malgré plusieurs essaies, dans certains cas
 
 ## Captures d'écran
 
-Les captures d'écran des tests sur Postman et l'interface utilisateur sont disponibles dans le répertoire backend/Screenshots.
+Les captures d'écran des tests, execution et interface utilisateur sont disponibles dans le répertoire backend/Screenshots.
