@@ -9,7 +9,7 @@ describe("Users", () => {
   // Get all users
   it("should GET all users", (done) => {
     chai
-      .request("http://localhost:5001") 
+      .request("http://localhost:5002") 
       .get("/users")
       .end((err, res) => {
         expect(res).to.have.status(200);
@@ -25,7 +25,7 @@ describe("Users", () => {
     };
   
     chai
-      .request("http://localhost:5001")
+      .request("http://localhost:5002")
       .post("/users")
       .send(newUser)
       .end((err, res) => {
